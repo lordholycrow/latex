@@ -1,0 +1,143 @@
+\documentclass[12 pt, a4paper]{article}
+\usepackage{amssymb, amsmath, amsthm, enumerate}
+\UseRawInputEncoding
+
+\begin{document}
+
+For  all $\alpha, \beta \in \mathbb{Z}_n $ and $ \kappa ,\ell \in \mathbb{Z},$ we have the identities: 
+
+\begin{center}
+$k(\ell \alpha)= (k\ell )\alpha = \ell (k\alpha), (k+\ell)\alpha =k\alpha +\ell \alpha, k(\alpha+\beta )=k\alpha+k\beta,$
+
+$(k\alpha)\beta =k(\alpha\beta )=\alpha(k\beta ).$
+\end{center}
+
+Analogously, for $\alpha_1,...,\alpha_\kappa \in \mathbb{Z}_n, $  we may write their product as $\Pi^k_{i=1} \alpha_i.$ By convention, this product is [1] when $ \kappa = 0 $ it is easy to see that if all of the $\alpha_i's$ belong to $ \mathbb{Z}^*_n,$ then so does their product, and in particular, $(\Pi^k{i=1} \alpha_i)^{-1} = \Pi^{ki=1} \alpha^{-1}_i;$ that is, the multiplicative inverse of the product is the product of the multiplicative
+
+
+inverses. In the special case where all the  $ \alpha_i's $ have the same value \verb|$\alpha$| , we define $ \alpha^\kappa := \Pi^\kappa_{i=1} \alpha; $ thus $\alpha^0 = [1], \alpha^1 = \alpha , \alpha^2 = \alpha \alpha , \alpha^3 = \alpha \alpha \alpha, $ and so on. If a  $ \alpha \in \mathbb{Z}^*_n, $ then the multiplicative inverse of $ \alpha^k $ is $(a^{-1)\kappa} ,$ which we may also write as $\alpha^-k; $ for example, $\alpha^{-2} =\alpha^{-1} \alpha^{-1} = (\alpha \alpha )^{-1}. $ Therefore, when $\alpha \in \mathbb{Z}^*_n ,$ the notation $ \alpha^k $ is defined for all integers \verb|$\kappa$|.
+
+\begin{center}
+$ (\alpha^\ell)^k = \alpha^{k\ell} =(\alpha^{k)\ell} , \alpha^{k+\ell} =\alpha^k \alpha^\ell , (\alpha\beta)^k = \alpha^{k \beta k} .   $ (2.7)
+\end{center}
+
+If $ \alpha ,\beta \in \mathbb{Z}^*_n,$ the identities in (2.7) hold for all  \verb|$\kappa$| , \verb|$\ell$| ,$\in$ $\mathbb{Z}$.
+
+For all $\alpha_1,...,\alpha_\kappa,\beta_1,...,\beta_\ell \in \mathbb{Z}_n, $ he distributive property implies that
+
+\begin{center}
+$(\alpha_1 + ... + \alpha_k)(\beta_1 +...+ \beta_\ell) = \sum_{1 \leq i \leq k 1 \leq j \leq \ell} \hspace{0.2cm} \alpha_i \beta_j. $
+\end{center}
+
+One last notational convention. As already mentioned, when the modulus $n$ is clear from context, we usually write $[\alpha ]$ instead of $[\alpha ]_n $ although we want to
+maintain a clear distinction between integers and their residue classes, occasionally even the notation $[\alpha ]$ is not only redundant, but distracting; in such situations, we may simply write $\alpha$  instead of $[\alpha ]$ For example, for every $\alpha \in \mathbb{Z}_n, $ we have the
+
+identity $(\alpha +[1]_n)(\alpha - [1]_n)=\alpha^2 - [1]_n,$ which we may write more simply as $(\alpha + [1])(\alpha - [1]) = \alpha^2 - [1],$ or even more simply, and hopefully more clearly, as $(\alpha + 1)(\alpha -1)=\alpha^2-1.$ Here, the only reasonable interpretation of the symbol “1” is [1], and so there can be no confusion.
+
+\vspace {0,5  cm}
+In summary, algebraic expressions involving residue classes may be manipulated in much the same way as expressions involving ordinary numbers. Extra complications arise only because when $n$ is composite, some non-zero elements of $\mathbb{Z}_n$ do not have multiplicative inverses, and the usual cancellation law does not apply for such elements.
+\vspace {0,5 cm}
+In general, one has a choice between working with congruences modulo $n$, or with the algebraic structure $\mathbb{Z}_n;$ ultimately, the choice is one of taste and convenience, and it depends on what one prefers to treat as “first class objects”: integers and congruence relations, or elements of $\mathbb{Z}_n$.
+
+
+An alternative, and somewhat more concrete, approach to constructing $\mathbb{Z}_n$ is to directly define it as the set of n “symbols” $[0], [1], . . . , [n - 1],$ with addition and multiplication defined as
+
+\begin{center}
+$[a] + [b] := [(a+b) $mod $n],\hspace{0.2cm} [a].[b] := [(a.b)$ mod $n],$ 
+\end{center}
+
+
+for $a, b \in {0,..., n - 1}.$ Such a definition is equivalent to the one we have given here. One should keep this alternative characterization of $\mathbb{Z}_n$ in mind; however, we prefer the characterization in terms of residue classes, as it is mathematically more elegant, and is usually more convenient to work with.
+
+\vspace {0,2  cm}
+
+We close this section with a reinterpretation of the Chinese remainder theorem(Theorem 2.6) in terms of residue classes.
+\vspace {0,2 cm}
+
+\textbf{Theorem 2.8 (Chinese remainder map).} Let ${n_i}^\kappa_{i=1} $ be a pairwise relatively
+prime family of positive integers, and let $ n:= \Pi^\kappa_{i=1} n_i.$ Define the map
+
+\begin{center}
+$ \theta: \hspace{0.5cm} \mathbb{Z}_n\rightarrow \mathbb{Z}_{n_1} x ... x \mathbb{Z}_{n_k}  $ 
+
+$[a]_n\mapsto ([a]_{n 1},...,[a]_{n k}). $
+\end{center}
+
+\begin{enumerate}[i)]
+\item The definition of \verb|$\theta$|  is unambiguous.
+\item $\theta $ is bijective.
+\item For all  $ \alpha , \beta \in \mathbb{Z}_n ,$ if $\theta (\alpha)= (\alpha_1,...,\alpha_\kappa) $ and $\theta (\beta )=(\beta_1,...,\beta_\kappa),$ then:
+\end{enumerate}
+
+\begin{center}
+\begin{enumerate}[a)]
+\item $ \theta (\alpha +\beta) = (\alpha_1 + \beta_1, ..., )\alpha_k + \beta_k); $
+\item $ \theta(-a)=(-\alpha_1,...,-\alpha_k);$
+\item $ \theta(\alpha \beta ) = (\alpha_1 \beta _1,..., \alpha _k \beta _k)$
+\item $ a\in \mathbb{Z}^*_n $ if and only if $ a_i \in \mathbb{Z}^{*}_{n_i} $ for $ i = 1,...,k, $in which case $ \theta(a^-1) = (a^{-1}_1,...,a^{-1}_k).$
+
+\end{enumerate}
+\end{center}
+
+
+Proof. For (i), note that $a \equiv a'$(mod $n$)implies$ a \equiv a' (mod n_i) $for$ i = 1,..., \kappa,$ and so the definition of $\theta$  is unambiguous (it does not depend on the choice of $a$).
+(ii) follows directly from the statement of the Chinese remainder theorem.
+
+For (iii), let $a = [a]_n and \beta = [b]_n,$ so that for $ i= 1,..,k, $ we have  $a_i = [a]_{n i} $ and $ \beta_i = [b]_{n i}.$ Then we have.
+
+\begin{center}
+$\theta(\alpha +\beta)=\theta([\alpha + b]_n) =([a+b]_{n 1},...,[a+b]_{n \kappa} ) = (\alpha_1 + \beta_1,...,\alpha_\kappa  + \beta_\kappa ), $
+
+$\theta(-\alpha) = \theta([-\alpha]_n) =([-\alpha ]_{n 1},...,[-\alpha ]_{n k})=(-\alpha _1,...,\alpha_\kappa), and$
+
+$\theta(\alpha \beta)=\theta([\alpha b]_n)=([\alpha b]_{n 1},...,[\alpha b]_{n \kappa} ) = (\alpha_1\beta_1,...,\alpha_\kappa \beta_\kappa  )$
+\end{center}
+
+That proves parts (a), (b), and (c). For part (d), we have 
+
+\begin{center}
+$\alpha \in \mathbb{Z}^*_n \Longleftrightarrow gcd(a,n)=1   $
+
+$\Longleftrightarrow gcd(a,n_i) = 1 for i = 1,...,\kappa  $
+
+$\Longleftrightarrow \alpha_i \in \mathbb{Z}^*_{n i} for i=1,...,k. $
+\end{center}
+
+Moreover, if $\alpha \in \mathbb{Z}^*_n $ and $\beta = a^{-1},$ then  
+
+\begin{center}
+$(\alpha_1 \beta_1,...,\alpha_\kappa \beta_\kappa)=\theta(\alpha \beta) = \theta([1]_n)=([1]_{n 1},...,[1]_{n 1},...,[1]_{n k}), $
+\end{center}
+
+and so for $i=1,...,\kappa,$ we have $\alpha_i \beta_i = [1]_{n i},$ which is to say $\beta_i = \alpha^{-1}_i.$
+
+\vspace {0,5  cm}
+Theorem 2.8 is very powerful conceptually, and is an indispensable tool in many situations. It says that if we want to understand what happens when we add or multiply $ \alpha, \beta \in \mathbb{Z}_n,$ it suffices to understand what happens when we add or multiply their “components” $\alpha_ , \beta_i \in \mathbb{Z}_{n i}, $ Typically, we choose $n_1,...,n_\kappa $ to be primes or
+prime powers, which usually simplifies the analysis. We shall see many applications of this idea throughout the text.
+\vspace {0,5  cm}
+
+\underline{EXERCISE 2.19.} Let $\theta: \mathbb{Z}_n \longrightarrow \mathbb{Z}_{n 1} \times .... \times\mathbb{Z}_{n k}$ be as in Theorem 2.8, and suppose
+that $ \theta(\alpha ) = (\alpha_1,...,\alpha_\kappa).$ Show that for every non-negative integer $ m$, we have $ \theta (\alpha^m)=(\alpha^m_1,...,\alpha^m_k).$ Moreover, if 
+$ \alpha \in  \mathbb{Z}^*_1$ show that this identity holds for all integers $m$.
+\vspace {0,3  cm}
+
+EXERCISE 2.20 Let $p$ be an odd prime. Show That $ \sum_{\beta \in \mathbb{Z}^*_p} \beta = 0.$
+\vspace {0,3  cm}
+
+EXERCISE 2.21. Let $p$ be an odd prime. Show that the numerator of $\sum^{p-1}_{i=1} 1/i$ is divisible by $p$.
+\vspace {0,3  cm}
+
+EXERCISE 2.22. Suppose $n$ is square-free (see Exercise 1.15), and let $ \alpha , \beta , \gamma \in \mathbb{Z}_n .$ Show that $\alpha^2 \beta  = a^2\gamma$ implies $\alpha \beta =\alpha \gamma $
+
+\begin{center}
+\textbf {2.6 Euler’s phi function}
+\end{center}
+\textbf{Euler’s phi function} (also called \textbf{Euler’s totient function}) is defined for all positive integers $n$ as
+\begin{center}
+$ \varphi(n):= |\mathbb{Z}^*_n|.$ 
+\end{center}
+
+Equivalently, $\varphi(n)$ is equal to the number of integers between 0 and $n-1$ that are relatively prime to $n.$ For example, $ \varphi(1)=1, \varphi(2) = 1, \varphi(3) = 2,$ and $ \varphi(4)=2.$ Using the Chinese remainder theorem, more specifically Theorem 2.8, it is easy
+to get a nice formula for $\varphi (n)$ in terms of the prime factorization of $n$, as we establish in the following sequence of theorems.
+ 
+\end{document}
